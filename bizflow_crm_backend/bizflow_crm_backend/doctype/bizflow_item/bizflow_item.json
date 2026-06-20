@@ -1,0 +1,57 @@
+{
+    "naming_rule":  "By fieldname",
+    "autoname":  "field:item_code",
+    "permissions":  [
+                        {
+                            "export":  1,
+                            "write":  1,
+                            "delete":  1,
+                            "report":  1,
+                            "role":  "System Manager",
+                            "read":  1,
+                            "share":  1,
+                            "create":  1
+                        }
+                    ],
+    "issingle":  0,
+    "name":  "BizFlow Item",
+    "module":  "BizFlow CRM Backend",
+    "doctype":  "DocType",
+    "custom":  0,
+    "fields":  [
+                   {
+                       "label":  "Item Code",
+                       "fieldtype":  "Data",
+                       "reqd":  1,
+                       "unique":  1,
+                       "fieldname":  "item_code"
+                   },
+                   {
+                       "label":  "Item Name",
+                       "fieldtype":  "Data",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "item_name"
+                   },
+                   {
+                       "label":  "HSN Code",
+                       "fieldtype":  "Data",
+                       "fieldname":  "hsn_code"
+                   },
+                   {
+                       "label":  "Selling Price",
+                       "fieldtype":  "Currency",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "selling_price"
+                   },
+                   {
+                       "fieldname":  "current_stock",
+                       "label":  "Current Stock",
+                       "read_only":  1,
+                       "in_list_view":  1,
+                       "default":  "0",
+                       "fieldtype":  "Float"
+                   }
+               ]
+}

@@ -1,0 +1,64 @@
+{
+    "naming_rule":  "By \"Naming Series\" field",
+    "autoname":  "naming_series:",
+    "permissions":  [
+                        {
+                            "export":  1,
+                            "write":  1,
+                            "delete":  1,
+                            "report":  1,
+                            "role":  "System Manager",
+                            "read":  1,
+                            "share":  1,
+                            "create":  1
+                        }
+                    ],
+    "issingle":  0,
+    "name":  "BizFlow Quotation",
+    "module":  "BizFlow CRM Backend",
+    "doctype":  "DocType",
+    "custom":  0,
+    "fields":  [
+                   {
+                       "label":  "Series",
+                       "fieldtype":  "Select",
+                       "reqd":  1,
+                       "options":  "QTN-.YYYY.-",
+                       "fieldname":  "naming_series"
+                   },
+                   {
+                       "label":  "Customer Name",
+                       "fieldtype":  "Data",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "customer_name"
+                   },
+                   {
+                       "label":  "Date",
+                       "fieldtype":  "Date",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "date"
+                   },
+                   {
+                       "label":  "CRM Deal",
+                       "fieldtype":  "Link",
+                       "options":  "CRM Deal",
+                       "fieldname":  "crm_deal"
+                   },
+                   {
+                       "label":  "Items",
+                       "fieldtype":  "Table",
+                       "reqd":  1,
+                       "options":  "BizFlow Quotation Item",
+                       "fieldname":  "items"
+                   },
+                   {
+                       "label":  "Total Amount",
+                       "fieldtype":  "Currency",
+                       "read_only":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "total_amount"
+                   }
+               ]
+}

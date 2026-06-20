@@ -1,0 +1,70 @@
+{
+    "fields":  [
+                   {
+                       "fieldname":  "item_code",
+                       "label":  "Item",
+                       "in_list_view":  1,
+                       "fieldtype":  "Link",
+                       "options":  "BizFlow Item",
+                       "reqd":  1
+                   },
+                   {
+                       "label":  "Item Name",
+                       "fieldtype":  "Data",
+                       "read_only":  1,
+                       "fetch_from":  "item_code.item_name",
+                       "fieldname":  "item_name"
+                   },
+                   {
+                       "label":  "HSN Code",
+                       "fieldtype":  "Data",
+                       "fetch_from":  "item_code.hsn_code",
+                       "fieldname":  "hsn_code"
+                   },
+                   {
+                       "fieldname":  "qty",
+                       "label":  "Quantity",
+                       "in_list_view":  1,
+                       "default":  "1",
+                       "fieldtype":  "Float",
+                       "reqd":  1
+                   },
+                   {
+                       "label":  "Rate",
+                       "fieldtype":  "Currency",
+                       "reqd":  1,
+                       "fetch_from":  "item_code.selling_price",
+                       "fieldname":  "rate"
+                   },
+                   {
+                       "label":  "CGST %",
+                       "fieldtype":  "Percent",
+                       "default":  "0",
+                       "fieldname":  "cgst_perc"
+                   },
+                   {
+                       "label":  "SGST %",
+                       "fieldtype":  "Percent",
+                       "default":  "0",
+                       "fieldname":  "sgst_perc"
+                   },
+                   {
+                       "label":  "IGST %",
+                       "fieldtype":  "Percent",
+                       "default":  "0",
+                       "fieldname":  "igst_perc"
+                   },
+                   {
+                       "label":  "Amount",
+                       "fieldtype":  "Currency",
+                       "read_only":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "amount"
+                   }
+               ],
+    "name":  "BizFlow GST Invoice Item",
+    "custom":  0,
+    "doctype":  "DocType",
+    "module":  "BizFlow CRM Backend",
+    "istable":  1
+}

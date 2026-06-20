@@ -1,0 +1,59 @@
+{
+    "naming_rule":  "By \"Naming Series\" field",
+    "autoname":  "naming_series:",
+    "permissions":  [
+                        {
+                            "export":  1,
+                            "write":  1,
+                            "delete":  1,
+                            "report":  1,
+                            "role":  "System Manager",
+                            "read":  1,
+                            "share":  1,
+                            "create":  1
+                        }
+                    ],
+    "issingle":  0,
+    "name":  "BizFlow Stock Entry",
+    "module":  "BizFlow CRM Backend",
+    "doctype":  "DocType",
+    "custom":  0,
+    "fields":  [
+                   {
+                       "label":  "Series",
+                       "fieldtype":  "Select",
+                       "reqd":  1,
+                       "options":  "STK-.YYYY.-",
+                       "fieldname":  "naming_series"
+                   },
+                   {
+                       "fieldname":  "item_code",
+                       "label":  "Item",
+                       "in_list_view":  1,
+                       "fieldtype":  "Link",
+                       "options":  "BizFlow Item",
+                       "reqd":  1
+                   },
+                   {
+                       "fieldname":  "type",
+                       "label":  "Entry Type",
+                       "in_list_view":  1,
+                       "fieldtype":  "Select",
+                       "options":  "Receive\nDeliver",
+                       "reqd":  1
+                   },
+                   {
+                       "label":  "Quantity",
+                       "fieldtype":  "Float",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "qty"
+                   },
+                   {
+                       "label":  "Reference Invoice",
+                       "fieldtype":  "Link",
+                       "options":  "BizFlow GST Invoice",
+                       "fieldname":  "reference_invoice"
+                   }
+               ]
+}

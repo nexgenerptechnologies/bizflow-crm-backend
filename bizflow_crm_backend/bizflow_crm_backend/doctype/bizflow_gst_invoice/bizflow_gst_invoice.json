@@ -1,0 +1,83 @@
+{
+    "naming_rule":  "By \"Naming Series\" field",
+    "autoname":  "naming_series:",
+    "permissions":  [
+                        {
+                            "export":  1,
+                            "write":  1,
+                            "delete":  1,
+                            "report":  1,
+                            "role":  "System Manager",
+                            "read":  1,
+                            "share":  1,
+                            "create":  1
+                        }
+                    ],
+    "issingle":  0,
+    "name":  "BizFlow GST Invoice",
+    "module":  "BizFlow CRM Backend",
+    "doctype":  "DocType",
+    "custom":  0,
+    "fields":  [
+                   {
+                       "label":  "Series",
+                       "fieldtype":  "Select",
+                       "reqd":  1,
+                       "options":  "INV-.YYYY.-",
+                       "fieldname":  "naming_series"
+                   },
+                   {
+                       "label":  "Customer Name",
+                       "fieldtype":  "Data",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "customer_name"
+                   },
+                   {
+                       "label":  "Customer GSTIN",
+                       "fieldtype":  "Data",
+                       "fieldname":  "gstin"
+                   },
+                   {
+                       "label":  "Invoice Date",
+                       "fieldtype":  "Date",
+                       "reqd":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "date"
+                   },
+                   {
+                       "label":  "Quotation Reference",
+                       "fieldtype":  "Link",
+                       "options":  "BizFlow Quotation",
+                       "fieldname":  "quotation_ref"
+                   },
+                   {
+                       "label":  "Items",
+                       "fieldtype":  "Table",
+                       "reqd":  1,
+                       "options":  "BizFlow GST Invoice Item",
+                       "fieldname":  "items"
+                   },
+                   {
+                       "label":  "Total Taxes",
+                       "fieldtype":  "Currency",
+                       "read_only":  1,
+                       "fieldname":  "total_taxes"
+                   },
+                   {
+                       "label":  "Grand Total",
+                       "fieldtype":  "Currency",
+                       "read_only":  1,
+                       "in_list_view":  1,
+                       "fieldname":  "grand_total"
+                   },
+                   {
+                       "fieldname":  "payment_status",
+                       "label":  "Payment Status",
+                       "in_list_view":  1,
+                       "default":  "Unpaid",
+                       "fieldtype":  "Select",
+                       "options":  "Unpaid\nPaid"
+                   }
+               ]
+}
