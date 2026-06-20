@@ -1,0 +1,16 @@
+﻿{
+    "name": "BizFlow Customer",
+    "module": "BizFlow CRM Backend",
+    "custom": 0,
+    "doctype": "DocType",
+    "permissions": [ { "write": 1, "create": 1, "read": 1, "role": "System Manager" } ],
+    "fields": [
+        { "label": "Customer Name", "fieldname": "customer_name", "fieldtype": "Data", "reqd": 1, "in_list_view": 1 },
+        { "label": "CRM Organization", "fieldname": "crm_organization", "fieldtype": "Link", "options": "CRM Organization" },
+        { "label": "Tax & Compliance", "fieldname": "tax_section", "fieldtype": "Section Break" },
+        { "label": "GSTIN", "fieldname": "gstin", "fieldtype": "Data", "in_list_view": 1 },
+        { "label": "PAN", "fieldname": "pan", "fieldtype": "Data" },
+        { "label": "Billing Address", "fieldname": "billing_address", "fieldtype": "Text" }
+    ],
+    "autoname": "field:customer_name"
+}
