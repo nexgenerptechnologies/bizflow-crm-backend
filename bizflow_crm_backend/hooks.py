@@ -7,3 +7,15 @@ app_license = "mit"
 
 after_migrate = "bizflow_crm_backend.setup.after_migrate"
 
+
+custom_fields = {
+    'User': [
+        {
+            'fieldname': 'bizflow_tenant',
+            'label': 'BizFlow Tenant',
+            'fieldtype': 'Link',
+            'options': 'BizFlow Tenant',
+            'insert_after': 'email'
+        }
+    ]
+}
